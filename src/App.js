@@ -7,9 +7,6 @@ import Nav from "./components/Nav"
 
 
 function App() {
-
-  // Map over this.state.employees and render a EmployeeCard component for each friend object
-  render() {
     return (
       <Wrapper>
         <Title />
@@ -17,7 +14,6 @@ function App() {
         <Main />
       </Wrapper>
     );
-  }
 }
 
 export default App;

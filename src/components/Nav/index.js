@@ -9,12 +9,14 @@ function Nav(props) {
                 <input
                     value={props.search}
                     onChange={props.handleInputChange}
+                    type="text"
                     name="employeeSearch"
                     className="form-control"
                     placeholder="Search for Employee"
                     id="search"
                 />
             </form>
+
         </nav> 
     )
 }
