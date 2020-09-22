@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import "./App.css";
 import Wrapper from "./components/Wrapper";
 import Title from "./components/Title";
-import Main from "./components/main";
+import Main from "./components/Main";
+import Nav from "./components/Nav"
 
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
     return (
       <Wrapper>
         <Title />
+        <Nav />
         <Main />
       </Wrapper>
     );
