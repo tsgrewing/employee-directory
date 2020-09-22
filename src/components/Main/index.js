@@ -3,7 +3,9 @@ import CardList from "../CardList";
 
 function Main() {
     return (
-        <CardList />
+        <div className="container">
+            <CardList />
+        </div>
     )
 }
 
