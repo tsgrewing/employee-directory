@@ -1,4 +1,4 @@
-# Budget Tracker
+# Employee Directory
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) ![Last Commit](https://img.shields.io/github/last-commit/tsgrewing/employee-directory) ![Repo Size](https://img.shields.io/github/repo-size/tsgrewing/employee-directory)
 
 ## Description
