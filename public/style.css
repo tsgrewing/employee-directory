@@ -1,3 +1,4 @@
-html {
-    background-color: darkslategrey;
+html, body {
+    background-color: darkslategrey!important;
+    height: 100%!important;
 }
