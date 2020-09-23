@@ -1,0 +1,11 @@
+form{
+    color: white!important;
+}
+
+#search {
+    background-color: slategray;
+}
+
+::placeholder {
+    color: #ffffff!important;
+}

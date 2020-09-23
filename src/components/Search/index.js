@@ -1,4 +1,5 @@
 import React from "react";
+import "./style.css"
 
 function Search(props) {
     return (
@@ -9,9 +10,10 @@ function Search(props) {
                 onChange={props.handleInputChange}
                 type="text"
                 name="employeeSearch"
-                className="form-control"
+                className="form-control text-center"
                 placeholder="Search by First Name"
                 id="search"
+                onSubmit={(e)=>(e.preventDefault)}
             />
             </div>
         </form >
