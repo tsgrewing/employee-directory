@@ -76,6 +76,7 @@ class EmployeeDirectory extends Component {
         };
     };
 
+    // add functionality to allow for searches by first or last name
     handleInputChange = evt => {
         const employees = this.state.employees;
         const searchedName = evt.target.value;
