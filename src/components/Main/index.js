@@ -1,10 +1,11 @@
 import React from "react";
-import CardList from "../CardList";
+import EmployeeDirectory from "../EmployeeDirectory";
+import "./style.css";
 
 function Main() {
     return (
         <div className="container">
-            <CardList />
+            <EmployeeDirectory />
         </div>
     )
 }

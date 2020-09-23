@@ -1,22 +1,11 @@
 import React from 'react';
+import Search from "../Search";
 import "./style.css";
 
 function Nav(props) {
     return (
-        <nav>
-            <form className="search">
-                <label htmlFor="employeeSearch">Search:</label>
-                <input
-                    value={props.search}
-                    onChange={props.handleInputChange}
-                    type="text"
-                    name="employeeSearch"
-                    className="form-control"
-                    placeholder="Search for Employee"
-                    id="search"
-                />
-            </form>
-
+        <nav className="navbar">
+            <Search  employees={props.employee} handleInputChange={props.handleInputChange} />
         </nav> 
     )
 }
