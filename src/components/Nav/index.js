@@ -4,7 +4,7 @@ import "./style.css";
 
 function Nav(props) {
     return (
-        <nav className="navbar">
+        <nav className="navbar navbar-dark bg-dark">
             <Search  employees={props.employee} handleInputChange={props.handleInputChange} />
         </nav> 
     )

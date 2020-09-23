@@ -16,7 +16,7 @@ function EmployeeTable(props) {
             {emp.email}
           </td>
           <td>
-            {emp.cell}
+            {emp.phone}
           </td>
         </tr>
       ))}

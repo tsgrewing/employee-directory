@@ -1,8 +1,7 @@
 import React, {Component} from "react";
-import Nav from "../Nav";
+import Search from "../Search";
 import EmployeeList from "../EmployeeList";
 import API from "../../utils/API";
-
 
 
 class EmployeeDirectory extends Component {
@@ -22,7 +21,8 @@ class EmployeeDirectory extends Component {
         });
     };
 
-    sortByName = () => {
+    // Combine email and name sorting to a single sortAlphabetically function and use data att to determine what to sort by
+    sortByName = (target) => {
         const searchedList = this.state.filteredEmployees;
         if (this.state.order === "ascend") {
             const sortedList = searchedList.sort((a, b) => (a.name.first > b.name.first) ? 1 : -1)
@@ -40,6 +40,42 @@ class EmployeeDirectory extends Component {
         };
     };
 
+    sortByEmail = () => {
+        const searchedList = this.state.filteredEmployees;
+        if (this.state.order === "ascend") {
+            const sortedList = searchedList.sort((a, b) => (a.email > b.email) ? 1 : -1)
+            this.setState({
+                searchedList: sortedList,
+                order: "descend"
+            })
+        }
+        else {
+            const sortedList = searchedList.sort((a, b) => (a.email > b.email) ? -1 : 1)
+            this.setState({
+                searchedList: sortedList,
+                order: "ascend"            
+            })
+        };
+    };
+    
+    sortByNumber = () => {
+        const searchedList = this.state.filteredEmployees;
+        if (this.state.order === "ascend") {
+            const sortedList = searchedList.sort((a, b) => (a.phone > b.phone) ? 1 : -1)
+            this.setState({
+                searchedList: sortedList,
+                order: "descend"
+            })
+        }
+        else {
+            const sortedList = searchedList.sort((a, b) => (a.phone > b.phone) ? -1 : 1)
+            this.setState({
+                searchedList: sortedList,
+                order: "ascend"            
+            })
+        };
+    };
+
     handleInputChange = evt => {
         const employees = this.state.employees;
         const searchedName = evt.target.value;
@@ -49,9 +85,9 @@ class EmployeeDirectory extends Component {
 
     render() {
         return (
-            <div>
-                <Nav employee={this.state.filteredEmployees} handleInputChange={this.handleInputChange} />
-                <EmployeeList employees={this.state.filteredEmployees} sortName={this.sortByName} />
+            <div className="directoryWrapper">
+                <Search  handleInputChange={this.handleInputChange} />
+                <EmployeeList employees={this.state.filteredEmployees} sortByName={this.sortByName} sortByEmail={this.sortByEmail} sortByNumber={this.sortByNumber} />
             </div>
         )
     }
